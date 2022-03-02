@@ -40,7 +40,6 @@
 
   // 检测缓存是否还有效 TRUE:缓存有效 FALSE:缓存失效
   pobj.checkCache = function (key) {
-    console.log('window.localStorage.....'+window.localStorage);
     if (!window._localStorage) {
       window._localStorage = window.localStorage;
     }
@@ -515,7 +514,7 @@ pobj.selectPkg = function () {
   }
 
   pobj.init = function () {
-    
+    alert('我被调用啦');
     // 获取用户浏览器信息，并设置值到pobj
     pobj.getUserAgent();
 
