@@ -40,6 +40,7 @@
 
   // 检测缓存是否还有效 TRUE:缓存有效 FALSE:缓存失效
   pobj.checkCache = function (key) {
+    console.log('window.localStorage.....'+window.localStorage);
     if (!window._localStorage) {
       window._localStorage = window.localStorage;
     }
@@ -80,6 +81,8 @@
   pobj.getUserAgent = function () {
     var userAgent = navigator.userAgent;
     var _userAgent = userAgent.toLowerCase();
+    console.log('userAgent....'+userAgent);
+    console.log('_userAgent....'+_userAgent);
 
     function $isAndroid(ua) {
       var res = +(ua.match(/.*Android (\d+).*/i) || [])[1];
